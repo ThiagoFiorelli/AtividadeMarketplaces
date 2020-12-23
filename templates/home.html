@@ -1,7 +1,9 @@
-<h1> Marketplaces </h1>
-
+{% extends 'template.html' %}
+{% block corpo %} 
 <ol> 
     {% for item in lista %}
         <li><a href='/marketplace/{{item}}'>{{item}}</a></li>
     {% endfor %}
 </ol>
+
+{% endblock %}

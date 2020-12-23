@@ -1,8 +1,13 @@
-<h1> Marketplace  - {{nome}}</h1>
+{% extends 'template.html' %}
+{% block titulo %} - {{nome}}{% endblock %}
+{% block corpo %} 
 
+<h2>Categorias:</h2>
 <ol> 
     {% for item in lista %}
         <li><a href='/categoria/{{item}}' >{{item}}</a></li>
     {% endfor %}
 </ol>
 <a href='/'>Voltar</a>
+
+{% endblock %}
