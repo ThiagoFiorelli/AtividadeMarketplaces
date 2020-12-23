@@ -1,49 +1,77 @@
 from actions import list_marketplaces_name, list_marketplace_categories, list_categorie_subcategories
 
-def marketplaces():
-    marketplaces = list_marketplaces_name()
+def get_marketplaces() -> None:
+    marketplaces_list = list_marketplaces_name()
+    return marketplaces(marketplaces_list)
 
-    print('\n Marketplaces: ')
+def marketplaces(marketplaces_list: list) -> str:
 
-    for option in marketplaces:
-        print(option)
+    if not marketplaces_list:
+        print('Nao existem marketplaces.')
+    else:
+        print('\n Marketplaces: ')
 
-    op = input('Escolha um marketplace pelo nome: ')
-    return op
+        for option in marketplaces_list:
+            print(option)
 
-def categorias(marketplace):
-    categorias = list_marketplace_categories(marketplace)
+        op = input('Escolha um marketplace pelo nome: ')
 
-    print('\n Categorias: ')
+        if op not in marketplaces_list:
+            print('Nenhum marketplace com esse nome foi encontrado.')
+            op = marketplaces(marketplaces_list)
+            
+        return op
 
-    for option in categorias:
-        print(option)
+def get_categorias(marketplace: str) -> None:
+    categorias_list = list_marketplace_categories(marketplace)
+    return categorias(categorias_list)
 
-    op = input('Escolha uma categoria pelo nome: ')
-    return op
+def categorias(categorias_list: list) -> list:
 
-def subcategorias(categoria):
-    subcategorias = list_categorie_subcategories(categoria)
+    if not categorias_list:
+        print('Esse marketplace não possui categorias.')
+    else:
+        print('\n Categorias: ')
 
-    print('\n Subcategorias: ')
+        for option in categorias_list:
+            print(option)
 
-    for option in subcategorias:
-        print(option)
+        op = input('Escolha uma categoria pelo nome: ')
 
+        if op not in categorias_list:
+            print('Nenhuma categoria com esse nome foi encontrado.')
+            op = categorias(categorias_list)
+
+        return op
+
+def get_subcategorias(categoria: str) -> None:
+    subcategorias_list = list_categorie_subcategories(categoria)
+    subcategorias(subcategorias_list)
+
+def subcategorias(subcategorias_list: str) -> None:
+
+    if not subcategorias_list:
+        print('Essa categoria não possui subcategorias.')
+    
+    else:
+        print('\n Subcategorias: ')
+
+        for option in subcategorias_list:
+            print(option)
+    
     while True:
-        op = input('Deseja sair? S/N: ').lower()
-        
-        if op == 's':
-            exit(0)
-        elif op == 'n':
-            break
-
+            op = input('Deseja sair? S/N: ').lower()
+            
+            if op == 's':
+                exit(0)
+            elif op == 'n':
+                break
 
 while True:
     try:
-        marketplace = marketplaces()
-        categoria = categorias(marketplace)
-        subcategorias(categoria)
+        marketplace = get_marketplaces()
+        categoria = get_categorias(marketplace)
+        get_subcategorias(categoria)
 
     except ValueError as err:
         print('Error de valor: ', err)

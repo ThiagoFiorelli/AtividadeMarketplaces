@@ -11,14 +11,14 @@ marketplaces = [ {'nome' : 'Mercado Livre', 'categorias' : [categorias[0], categ
 
 
 
-def list_marketplaces_name():
+def list_marketplaces_name() -> list:
     list_ = []
     for marketplace in marketplaces:
         list_.append(marketplace['nome'])
     
     return list_
 
-def list_marketplace_categories(name):
+def list_marketplace_categories(name: str) -> list:
     list_ = []
     for marketplace in marketplaces:
         if marketplace['nome'] == name:
@@ -27,7 +27,7 @@ def list_marketplace_categories(name):
     
     return list_
 
-def list_categorie_subcategories(name):
+def list_categorie_subcategories(name: str) -> list:
     list_ = []
     for categoria in categorias:
         if categoria['nome'] == name:
@@ -37,10 +37,3 @@ def list_categorie_subcategories(name):
     return list_
     
         
-
-list_marketplaces_name()
-list_marketplace_categories('Mercado Livre')
-list_categorie_subcategories('Eletronico')
-
-
-#lista_subcategorias_categoria = [e for e in item if item['nome'] == name]
