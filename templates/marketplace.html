@@ -5,7 +5,7 @@
 <h2>Categorias:</h2>
 <ol> 
     {% for item in lista %}
-        <li><a href='/categoria/{{item}}' >{{item}}</a></li>
+        <li><a href='/categoria/{{item.get_name()}}' >{{item.get_name()}}</a></li>
     {% endfor %}
 </ol>
 <a href='/'>Voltar</a>

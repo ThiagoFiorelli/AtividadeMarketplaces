@@ -5,7 +5,7 @@
 <h2>Subategorias:</h2>
 <ol> 
     {% for item in lista %}
-        <li>{{item}}</li>
+        <li>{{item.get_name()}}</li>
     {% endfor %}
 </ol>
 <a href='/'>Voltar</a>
