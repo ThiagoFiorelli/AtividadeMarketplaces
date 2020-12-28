@@ -1,6 +1,5 @@
 from Marketplace import Marketplace, Categoria, Subcategoria
 
-caminho = 'log.txt'
 categorias_txt = 'categorias.txt'
 marketplaces_txt = 'marketplaces.txt'
 
