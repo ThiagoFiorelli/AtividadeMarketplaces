@@ -1,0 +1,7 @@
+Eletronico;Smartphones
+Eletronico;Tablet
+Eletronico;TV
+Cozinha;Pratos
+Cozinha;Talheres
+Esporte;Musculação
+Esporte;Futebol

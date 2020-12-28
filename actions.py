@@ -1,16 +1,18 @@
 from Marketplace import Marketplace, Categoria, Subcategoria
+from db_sim import get_marketplaces_from_file
 
-categoria1 = Categoria('Eletronico', [Subcategoria('Smartphones'),Subcategoria('Tablet'), Subcategoria('TV')])
-categoria2 = Categoria('Cozinha', [Subcategoria('Pratos'),Subcategoria('Talheres')])
-categoria3 = Categoria('Esporte', [Subcategoria('Musculação'),Subcategoria('Futebol')])
+# categoria1 = Categoria('Eletronico', [Subcategoria('Smartphones'),Subcategoria('Tablet'), Subcategoria('TV')])
+# categoria2 = Categoria('Cozinha', [Subcategoria('Pratos'),Subcategoria('Talheres')])
+# categoria3 = Categoria('Esporte', [Subcategoria('Musculação'),Subcategoria('Futebol')])
 
-marketplace1 = Marketplace('Mercado Livre',[categoria1, categoria2])
-marketplace2 = Marketplace('Amazon',[categoria1, categoria3])
-marketplace3 = Marketplace('Magazine Luiza',[categoria2, categoria3])
+# marketplace1 = Marketplace('Mercado Livre',[categoria1, categoria2])
+# marketplace2 = Marketplace('Amazon',[categoria1, categoria3])
+# marketplace3 = Marketplace('Magazine Luiza',[categoria2, categoria3])
 
-categorias = [categoria1, categoria2, categoria3]
-marketplaces = [marketplace1, marketplace2, marketplace3]
+# categorias = [categoria1, categoria2, categoria3]
+# marketplaces = [marketplace1, marketplace2, marketplace3]
 
+marketplaces, categorias = get_marketplaces_from_file()
 
 def list_marketplaces_name() -> list:
     list_ = []

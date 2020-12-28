@@ -1,0 +1,6 @@
+Mercado Livre;Eletronico
+Mercado Livre;Cozinha
+Amazon;Eletronico
+Amazon;Esporte
+Magazine Luiza;Cozinha
+Magazine Luiza;Esporte

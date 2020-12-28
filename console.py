@@ -24,11 +24,11 @@ def marketplaces(marketplaces_list: list) -> str:
             
         return op
 
-def get_categorias(marketplace: str) -> list:
+def get_categories(marketplace: str) -> list:
     categorias_list = list_marketplace_categories(marketplace)
-    return categorias(categorias_list)
+    return categories(categorias_list)
 
-def categorias(categorias_list: list) -> str:
+def categories(categorias_list: list) -> str:
 
     if not categorias_list:
         print('Esse marketplace não possui categorias.')
@@ -44,15 +44,15 @@ def categorias(categorias_list: list) -> str:
 
         if op not in list_:
             print('Nenhuma categoria com esse nome foi encontrado.')
-            op = categorias(categorias_list)
+            op = categories(categorias_list)
 
         return op
 
-def get_subcategorias(categoria: str) -> None:
+def get_subcategories(categoria: str) -> None:
     subcategorias_list = list_categorie_subcategories(categoria)
-    subcategorias(subcategorias_list)
+    subcategories(subcategorias_list)
 
-def subcategorias(subcategorias_list: str) -> None:
+def subcategories(subcategorias_list: str) -> None:
 
     if not subcategorias_list:
         print('Essa categoria não possui subcategorias.')
@@ -74,8 +74,8 @@ def subcategorias(subcategorias_list: str) -> None:
 while True:
     try:
         marketplace = get_marketplaces()
-        categoria = get_categorias(marketplace)
-        get_subcategorias(categoria)
+        categoria = get_categories(marketplace)
+        get_subcategories(categoria)
 
     except ValueError as err:
         print('Error de valor: ', err)
