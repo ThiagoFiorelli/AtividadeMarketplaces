@@ -29,7 +29,7 @@
 # def list_marketplace_categories(name: str) -> list:
 #     list_ = []
 #     for marketplace in marketplaces:
-#         if marketplace.get_name() == name:
+#         if marketplace.name == name:
 #             for categoria in marketplace['categorias']:
 #                 list_.append(categoria['nome'])
 #     return list_  

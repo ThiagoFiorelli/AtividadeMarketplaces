@@ -4,3 +4,5 @@ Amazon;Eletronico
 Amazon;Esporte
 Magazine Luiza;Cozinha
 Magazine Luiza;Esporte
+Amazon;Cozinha
+Magazine Luiza;Eletronico

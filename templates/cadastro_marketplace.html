@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+{% block corpo %}
+
+<form action="/create" >
+    <input value="marketplace" name="type" id="type" style="display: none;"> 
+    <label>Nome :</label> <input type="text" name="name" id="name"/>
+
+    <label>Categorias :</label>
+    <select name="categories" id="categories">
+    {% for item in lista_categorias %}
+        <option value="{{item.name}}" {% if lista_categorias.index(item) == 0 %}selected{% endif %}>{{item.name}}</option>
+    {%  endfor %}
+    <input type='submit' value='Criar' />
+</form>
+<a href='/'>Voltar</a>
+
+{% endblock %}

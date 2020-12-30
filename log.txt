@@ -1,3 +1,5 @@
-17:29:49 - 28/12/2020 : Acesso a listagem de marketplaces.
-17:29:55 - 28/12/2020 : Acesso a listagem de categorias do marketplace "Amazon".
-17:29:59 - 28/12/2020 : Acesso a listagem de subcategorias da categoria "Esporte".
+15:34:52 - 30/12/2020 : Adicionado o marketplace "Magazine Luiza" ao database.
+15:35:45 - 30/12/2020 : Adicionado o marketplace "Magazine Luiza" ao database.
+15:35:59 - 30/12/2020 : Acesso a listagem de marketplaces.
+15:36:00 - 30/12/2020 : Acesso a listagem de categorias do marketplace "Magazine Luiza".
+15:36:02 - 30/12/2020 : Acesso a listagem de subcategorias da categoria "Eletronico".

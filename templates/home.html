@@ -1,9 +1,8 @@
 {% extends 'template.html' %}
 {% block corpo %} 
+<h1>Gerenciamento de Marketplaces</h1>
 <ol> 
-    {% for item in lista %}
-        <li><a href='/marketplace/{{item.get_name()}}'>{{item.get_name()}}</a></li>
-    {% endfor %}
+    <li><a href='/cadastro_marketplace'>Cadastrar Marketplace</a></li>
+    <li><a href='/marketplaces'>Listar Marketplaces</a></li>
 </ol>
-
 {% endblock %}

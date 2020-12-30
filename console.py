@@ -13,8 +13,8 @@ def marketplaces(marketplaces_list: list) -> str:
 
         list_ = []
         for option in marketplaces_list:
-            list_.append(option.get_name())
-            print(option.get_name())
+            list_.append(option.name)
+            print(option.name)
         
         op = input('Escolha um marketplace pelo nome: ')
 
@@ -37,8 +37,8 @@ def categories(categorias_list: list) -> str:
 
         list_ = []
         for option in categorias_list:
-            list_.append(option.get_name())
-            print(option.get_name())
+            list_.append(option.name)
+            print(option.name)
 
         op = input('Escolha uma categoria pelo nome: ')
 
@@ -61,7 +61,7 @@ def subcategories(subcategorias_list: str) -> None:
         print('\n Subcategorias: ')
 
         for option in subcategorias_list:
-            print(option.get_name())
+            print(option.name)
     
     while True:
             op = input('Deseja sair? S/N: ').lower()

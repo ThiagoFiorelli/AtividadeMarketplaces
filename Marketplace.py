@@ -1,42 +1,61 @@
 class Subcategoria:
-    __nome: str
+    __name: str
 
-    def __init__(self, nome: str):
-        self.__nome = nome
+    def __init__(self, name: str):
+        self.__name = name
     
-    def get_name(self) -> str:
-        return self.__nome
+    @property
+    def name(self) -> str:
+        return self.__name
+    
+    @name.setter
+    def name(self, name):
+        self.__name = name
 
 class Categoria:
-    __nome: str
-    __subcategorias: list
+    __name: str
+    __subcategories: list
 
-    def __init__(self, nome: str):
-        self.__nome = nome
-        self.__subcategorias = []
+    def __init__(self, name: str):
+        self.__name = name
+        self.__subcategories = []
 
-    def get_name(self) -> str:
-        return self.__nome
+    @property
+    def name(self) -> str:
+        return self.__name
     
-    def get_subcategories(self) -> list:
-        return self.__subcategorias
+    @name.setter
+    def name(self, name):
+        self.__name = name
     
-    def set_subcategories(self, subcategoria: Subcategoria):
-        self.__subcategorias.append(subcategoria)
+    @property
+    def subcategories(self) -> list:
+        return self.__subcategories
+    
+    @subcategories.setter
+    def subcategories(self, subcategoria: Subcategoria):
+        self.__subcategories.append(subcategoria)
 
 class Marketplace:
-    __nome: str
-    __categorias: list
+    __name: str
+    __categories: list
 
-    def __init__(self, nome: str):
-        self.__nome = nome
-        self.__categorias = []
+    def __init__(self, name: str):
+        self.__name = name
+        self.__categories = []
 
-    def get_name(self) -> str:
-        return self.__nome
+    @property
+    def name(self) -> str:
+        return self.__name
+    
+    @name.setter
+    def name(self, name):
+        self.__name = name
 
-    def get_categories(self) -> list:
-        return self.__categorias
+    @property
+    def categories(self) -> list:
+        return self.__categories
 
-    def set_categories(self, categoria: Categoria):
-        self.__categorias.append(categoria)
+    @categories.setter
+    def categories(self, categoria: Categoria):
+        self.__categories.append(categoria)
