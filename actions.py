@@ -4,7 +4,7 @@ from db_sim import get_marketplaces, add_marketplace, get_categories
 
 def create_marketplace(name: str, categories: str) -> None:
     marketplace = Marketplace(name)
-    marketplace.categories = categories
+    marketplace.categories.extend(categories)
     add_marketplace(marketplace)
     generate_log(f'Adicionado o marketplace "{marketplace.name}" ao database.')
 

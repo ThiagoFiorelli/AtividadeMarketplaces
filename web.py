@@ -25,7 +25,8 @@ def create():
     nome = request.args.get('name')
 
     if tipo == 'marketplace':
-        categorias = request.args.get('categories')
+        args_dict = request.args.to_dict(flat=False)
+        categorias = args_dict['categories']
         create_marketplace(nome, categorias)
     elif tipo == 'categoria':
         pass

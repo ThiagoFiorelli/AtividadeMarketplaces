@@ -6,7 +6,7 @@
     <label>Nome :</label> <input type="text" name="name" id="name"/>
 
     <label>Categorias :</label>
-    <select name="categories" id="categories">
+    <select name="categories" id="categories" multiple>
     {% for item in lista_categorias %}
         <option value="{{item.name}}" {% if lista_categorias.index(item) == 0 %}selected{% endif %}>{{item.name}}</option>
     {%  endfor %}
