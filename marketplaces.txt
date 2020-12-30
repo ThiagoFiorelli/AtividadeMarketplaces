@@ -6,5 +6,4 @@ Magazine Luiza;Cozinha
 Magazine Luiza;Esporte
 Amazon;Cozinha
 Magazine Luiza;Eletronico
-dasdsa;Eletronico
-dasdsa;Esporte
+
