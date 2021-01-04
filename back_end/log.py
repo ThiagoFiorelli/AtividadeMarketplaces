@@ -1,6 +1,6 @@
 from datetime import datetime
 
-log_txt = 'log.txt'
+log_txt = 'data/log.txt'
 
 def generate_log(msg: str) -> None:
 

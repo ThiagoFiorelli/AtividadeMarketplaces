@@ -1,5 +1,8 @@
+import sys
+sys.path.append('.')
+
 from flask import Flask, render_template, request
-from actions import list_marketplaces_name, list_marketplace_categories, list_categorie_subcategories, list_categories, create_marketplace
+from back_end.actions import list_marketplaces_name, list_marketplace_categories, list_categorie_subcategories, list_categories, create_marketplace
 
 app = Flask(__name__)
 

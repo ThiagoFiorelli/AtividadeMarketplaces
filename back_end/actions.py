@@ -1,6 +1,9 @@
-from Marketplace import Marketplace, Categoria, Subcategoria
-from log import generate_log
-from db_sim import get_marketplaces, add_marketplace, get_categories
+import sys
+sys.path.append('.')
+
+from model.Marketplace import Marketplace, Categoria, Subcategoria
+from back_end.log import generate_log
+from back_end.db_sim import get_marketplaces, add_marketplace, get_categories
 
 def create_marketplace(name: str, categories: str) -> None:
     marketplace = Marketplace(name)

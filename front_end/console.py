@@ -1,4 +1,7 @@
-from actions import list_marketplaces_name, list_marketplace_categories, list_categorie_subcategories
+import sys
+sys.path.append('.')
+
+from back_end.actions import list_marketplaces_name, list_marketplace_categories, list_categorie_subcategories
 
 def get_marketplaces() -> list:
     marketplaces_list = list_marketplaces_name()

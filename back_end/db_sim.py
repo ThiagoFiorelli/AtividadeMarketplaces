@@ -1,7 +1,10 @@
-from Marketplace import Marketplace, Categoria, Subcategoria
+import sys
+sys.path.append('.')
 
-categorias_txt = 'categorias.txt'
-marketplaces_txt = 'marketplaces.txt'
+from model.Marketplace import Marketplace, Categoria, Subcategoria
+
+categorias_txt = 'data/categorias.txt'
+marketplaces_txt = 'data/marketplaces.txt'
 
 def add_marketplace(marketplace: Marketplace) -> None:
     with open(marketplaces_txt, 'a', encoding='utf-8') as marketplaces_file:
